@@ -5,3 +5,9 @@
 a {
    text-decoration: none !important;
  }
+ body{
+   width: 100%; 
+   max-width: 1024px;
+   margin: 2%;
+   background-color: darkolivegreen;
+}
