@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <style>
+        #header{
+    grid-area: h;
+    background-color: aquamarine;
+    text-align: center;
+    width: auto;
+}
+#nav{
+    display: flex;
+    background-color: mediumseagreen;
+    grid-area: n;
+    align-items:center;
+}
+#nav a{
+    border-right: 2px solid black;
+    color: white;
+    padding: 2%
+}
+
+#clm1{
+    grid-area: c1;
+    background-color: grey;
+    padding: 1%;
+    height: 350px;
+}
+#clm2{
+    grid-area: c2;
+    background-color: lightgray;
+    padding: 0.5%;
+    height: 350px;
+}
+#clm3{
+    grid-area: c3;
+    background-color: darkgrey;
+    padding: 1%;
+    height: 350px;
+}
+#footer{
+    grid-area: f;
+    background-color:mediumseagreen ;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#container{
+    grid-template-areas:
+    'h h h h'
+    'n n n n'
+    'c1 c2 c2 c3'
+    'f f f f';
+    display: grid;
+}
+
+@media screen and (max-width:600px) {
+    #container{
+        grid-template-areas:
+        'h h h h'
+        'n n n n'
+        'c1 c1 c2 c2'
+        'c3 c3 c3 c3'
+        'f f f f';
+        display: grid;
+    }
+    
+}
+      </style>
         <title>Responsive Design</title>
-        <meta charset="utf-8" http-equiv="Permissions-Policy" content="interest-cohort=()">
-        <link href="Lab3.css" rel="stylesheet">
+        <meta charset="utf-8">
     </head>
     <body>
       <div id="container">
