@@ -1,9 +1,7 @@
-let currentAnimation;
 let customAnimation = ["Blank", "Exercise", "Juggler", "Bike", "Dive"];
 var myInterval;
 
 function startAnimation() {
-    currentAnimation = document.getElementById("text-area").value;
     document.getElementById("stop").disabled = false;
     document.getElementById("start").disabled = true;
     document.getElementById("animation").disabled = true;
