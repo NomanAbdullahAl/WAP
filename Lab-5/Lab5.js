@@ -35,20 +35,23 @@ function fontSizeOnChange() {
     let fontSize = document.getElementById("fontsize").value;
 	
     if(fontSize == "Tiny"){
-	document.getElementById("text-area").style.fontSize = "Small";
-	document.getElementById("text-area").style.fontSize = "50%";
+        document.getElementById("text-area").style.fontSize = "7pt";
+    }
+    else if(fontSize == "Small"){
+        document.getElementById("text-area").style.fontSize="10pt";
+    }
+    else if(fontSize == "Medium"){
+        document.getElementById("text-area").style.fontSize="12pt";
+    }
+    else if(fontSize == "Large"){
+        document.getElementById("text-area").style.fontSize ="16pt";
     }
     else if(fontSize == "Extra Large"){
-	document.getElementById("text-area").style.fontSize = "Large";
-	document.getElementById("text-area").style.fontSize = "200%";
+        document.getElementById("text-area").style.fontSize ="24pt";
     }
     else if(fontSize == "XXL"){
-	document.getElementById("text-area").style.fontSize = "Large";
-	document.getElementById("text-area").style.fontSize = "400%";
+        document.getElementById("text-area").style.fontSize ="32pt";
     }
-    else{
-    	document.getElementById("text-area").style.fontSize = fontSize;
-   }
 }
 
 
