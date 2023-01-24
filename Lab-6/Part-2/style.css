@@ -1,0 +1,20 @@
+.navbar1{
+    display: flex;
+    background-color: blue;
+    color: white;
+    align-items:center;
+}
+.first{
+    grid-area: f;
+    position: relative;
+    right: 2%;
+}
+.second{
+    grid-area: s;
+    position: relative;
+    left: 2%;
+}
+form{
+    grid-template-areas: 'f f f s s s';
+    display: grid;
+}
