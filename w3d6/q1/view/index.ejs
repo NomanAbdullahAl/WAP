@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+ <meta charset="utf-8">
+ <title>Current time</title>
+ <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+                let linkDom  = $("<link>",{
+                    rel:"stylesheet",
+                    href : (()=>{
+                        let date = new Date();
+                        let hours = date.getHours();
+                        if(hours > 6 && hours <18){
+                            return "/css/day.css";
+                        }
+                        return "/css/night.css";
+                    })()
+                });
+
+                $("head").append(linkDom);
+            });
+        </script>
+ </head>
+ <body>
+ This page was loaded at <%= time %>
+ </body>
+</html>

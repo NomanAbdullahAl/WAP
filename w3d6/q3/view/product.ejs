@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Products</title>
+    </head>
+    <body>
+       
+            <pre><label> Name              price              Description</label></pre>
+            <% for(const product of products) {%>
+                <form method="post" action="/addToCart">
+                    <pre><label> <%=product.name%>     <%=product.price%>       <%=product.description%> </label> <input type="submit" id= <%=product.id%> value = "Add to Cart"></pre>
+                    <input type="hidden" name="product" value = <%=product.name%>>
+                    <br>
+                </form>
+            <%}%>
+    </body>
+</html>
