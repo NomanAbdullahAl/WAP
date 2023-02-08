@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Products</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="product.js"></script>
+    </head>
+    <body>
+       
+            <pre><label> Name              price              Description</label></pre>
+            <% for(const product of products) {%>
+                <div>
+                    <pre><label> <%=product.name%>     <%=product.price%>       <%=product.description%> </label> <input type="submit" id= <%=product.id%> value = "Add to Cart"></pre>
+                    <input type="hidden" name="name" value = <%=product.name%>>
+                    <input type="hidden" name="price" value = <%=product.price%>>
+                    <br>
+                </div>
+            <%}%>
+            <div>
+                <a href="/cart">View Carts : <span id="cartCount"> 0</span></a>
+            </div>
+
+    </body>
+</html>

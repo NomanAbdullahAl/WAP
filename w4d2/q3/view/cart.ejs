@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Cart</title>
+    </head>
+    <body>
+       <table>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+            </tr>
+            <% for(const c in cart) {%>
+                <tr>
+                    <td> <%= c %></td>
+                    <td> <%= cart[c].price %></td>
+                    <td> <%= cart[c].quanity %></td>
+                </tr>
+            <%}%>
+       </table>
+    </body>
+</html>
