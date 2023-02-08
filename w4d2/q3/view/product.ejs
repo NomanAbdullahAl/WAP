@@ -11,7 +11,8 @@
             <pre><label> Name              price              Description</label></pre>
             <% for(const product of products) {%>
                 <div>
-                    <pre><label> <%=product.name%>     <%=product.price%>       <%=product.description%> </label> <input type="submit" id= <%=product.id%> value = "Add to Cart"></pre>
+                    <pre><label> <%=product.name%>     <%=product.price%>       <%=product.description%> </label> 
+                    <input type="button" id= <%=product.id%> value = "Add to Cart"></pre>
                     <input type="hidden" name="name" value = <%=product.name%>>
                     <input type="hidden" name="price" value = <%=product.price%>>
                     <br>

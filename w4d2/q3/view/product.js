@@ -1,10 +1,10 @@
 $(function(){
 
-    $("input[type='submit']").click(()=>{
+    $("input[type='button']").click((e)=>{
 
         let data = {
-            name : $(this).find("input[name='name']").val(),
-            price : $(this).find("input[name='price']").val()
+            name : $(e.currentTarget).parent().parent().find("input[name='name']").val(),
+            price : $(e.currentTarget).parent().parent().find("input[name='price']").val()
         };
 
         $.ajax({
